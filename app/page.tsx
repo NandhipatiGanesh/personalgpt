@@ -1,18 +1,22 @@
+"use client";
 import InputMain from "@/app/components/Inputs/BigTextInput";
+import { ChatProvider } from "@/app/hooks/useChatContext";
+import ChatMain from "@/app/components/chatMainArea/ChatMain";
 
 export default function Home() {
   return (
-    <>
-      <section className="min-h-screen  flex flex-col">
-        <div className="flex-1">
-          {/* Your chat history/messages can go here */}
+    <ChatProvider>
+      <section className="h-screen flex flex-col">
+        {/* Chat Messages */}
+        <div className="flex-1 overflow-y-auto scrollbar-hide">
+          <ChatMain />
         </div>
 
         {/* Sticky Input Bar */}
-        <div className="sticky bottom-0  z-10">
+        <div className="z-10 sticky bottom-0 ">
           <InputMain />
         </div>
       </section>
-    </>
+    </ChatProvider>
   );
 }

@@ -30,7 +30,7 @@ export default function ClientLayout({
         </div>
 
         {/* Scrollable content under fixed header */}
-        <main className="mt-[64px] p-2 md:p-4 overflow-y-auto h-full">
+        <main className=" py-2 px-4 md:p-4 overflow-y-auto h-full scrollbar-hide">
           {children}
         </main>
       </div>
