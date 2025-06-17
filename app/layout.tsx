@@ -6,7 +6,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "SlothGPT UI",
+  title: "PersonalGPT UI - Webcomponents",
   description: "Chat-like AI interface built with Next.js",
 };
 

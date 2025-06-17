@@ -55,7 +55,7 @@ export default function ChatMain() {
           <div className="max-w-[80%]">
             <div className="flex items-center gap-2 mb-1">
               <p className="text-xs font-semibold text-slate-800">
-                {msg.role === "user" ? "You" : "slothGPT"}
+                {msg.role === "user" ? "You" : "GPT"}
               </p>
               <span className="text-[11px] text-gray-400">02:22 AM</span>
             </div>
