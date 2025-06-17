@@ -34,7 +34,7 @@ export default function ChatMain() {
 
   if (!context) return null;
 
-  const { messages, isLoading } = context;
+  const { messages } = context;
 
   return (
     <div className="flex-1 overflow-y-auto h-screen w-full mx-auto nd:px-4 lg:px-4 md:w-4xl scrollbar-hide mb-8 ">

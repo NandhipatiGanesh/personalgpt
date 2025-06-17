@@ -18,9 +18,9 @@ const TemplateCards = ({ data }: { data: Template[] }) => {
     <div className="flex flex-row overflow-x-auto gap-4 mt-2  px-1 pb-2 scrollbar-hide">
       {data.map((item) => {
         const previewUrl = item.custom_fields._template_preview?.[0] || "#";
-        const downloadUrl = item.custom_fields._template_link?.[0] || "#";
-        const isPaid = item.custom_fields._template_paid?.[0] === "paid";
-        const price = item.custom_fields._template_price?.[0] || "0";
+        // const downloadUrl = item.custom_fields._template_link?.[0] || "#";
+        // const isPaid = item.custom_fields._template_paid?.[0] === "paid";
+        // const price = item.custom_fields._template_price?.[0] || "0";
 
         return (
           <a
