@@ -5,13 +5,11 @@ import { ChatContext } from "@/app/hooks/useChatContext";
 import { FiCpu } from "react-icons/fi";
 import Avatar from "../Avatar";
 import TemplateCards from "./TemplateCards";
-
 function isTemplateMessage(
   msg: Message
 ): msg is { role: "ai-templates"; text?: string; data?: Template[] } {
   return msg.role === "ai-templates";
 }
-
 type Template = {
   id: number;
   title: string;
