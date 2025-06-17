@@ -3,18 +3,14 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Navitemsvgs from "@/public/Navitemsvgs";
 
-type SidebarProps = {
-  sidebarOpen: boolean;
-};
 
-export default function Sidebar({ sidebarOpen }: SidebarProps) {
+
+export default function Sidebar() {
   const pathname = usePathname();
   return (
     <div
       className={`h-screen w-24 bg-white p-2 border-l border-r border-[#E2E8F0] flex flex-col justify-between items-center
-      ${
-        sidebarOpen ? "flex" : "hidden"
-      } md:flex lg:flex transition-all duration-300 z-50 fixed md:static`}
+       md:flex lg:flex transition-all duration-300 z-50 fixed md:static`}
     >
       {/* Top Section */}
       <div className="flex flex-col items-center">

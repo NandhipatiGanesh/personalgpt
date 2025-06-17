@@ -95,13 +95,13 @@ export default function InputMain() {
 
   return (
     <div className="flex items-center justify-center w-full px-4 pb-4">
-      <div className="flex items-center w-full max-w-3xl rounded-full border border-gray-300 pl-4 pr-2 py-2 ">
+      <div className="flex items-center w-full max-w-3xl rounded-full border border-gray-300 pl-4 pr-2 py-2 bg-white">
         <FiPaperclip className="text-gray-400 w-5 h-5 mr-3 cursor-pointer" />
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Message slothGPT..."
-          className="flex-1 border-none focus:outline-none text-sm text-gray-800 placeholder-gray-400 bg-transparent"
+          className="flex-1 border-none focus:outline-none text-sm text-gray-800 placeholder-gray-400 bg-transparent "
           onKeyDown={(e) => e.key === "Enter" && handleSend()}
         />
         <FiMic className="text-gray-400 w-5 h-5 mr-3 cursor-pointer" />

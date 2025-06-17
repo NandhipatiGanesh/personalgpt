@@ -16,10 +16,10 @@ export default function ClientLayout({
     <div className="h-screen overflow-hidden flex">
       {/* Sidebar fixed left */}
       <div className="hidden md:block  h-screen w-24 z-40">
-        <Sidebar sidebarOpen={sidebarOpen} />
+        <Sidebar />
       </div>
       <div>
-        <NextBar />
+        <NextBar NextBarOpen={sidebarOpen} />
       </div>
 
       {/* Right side: full width minus sidebar */}

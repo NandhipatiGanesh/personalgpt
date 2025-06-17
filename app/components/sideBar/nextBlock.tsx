@@ -3,10 +3,22 @@ import MainLinks from "../ShotHeader/mainLinks";
 import TodaysChats from "../ShotHeader/todayChats";
 import PrevChats from "../ShotHeader/prevChats";
 import UpgradeBox from "../ShotHeader/upGradeBox";
-export default function NextBar() {
+import { motion } from "framer-motion";
+
+export default function NextBar({ NextBarOpen }: { NextBarOpen: boolean }) {
   return (
     <>
-      <section className="w-80 h-screen bg-[#F8FAFC] overflow-y-auto scrollbar-hide">
+      <motion.section
+       initial={wrapperVariants}
+        variants={wrapperVariants}
+        // animate={NextBarOpen ? "open" : "closed"}
+        className={`md:flex md:flex-col  lg:flex lg:flex-col w-80 h-screen bg-[#F8FAFC] overflow-y-auto scrollbar-hide border-l border-r border-[#E2E8F0]  duration-3000 ease-in-out ease-in-out transform
+        ${ NextBarOpen
+            ? "flex flex-col z-50 fixed left-0 "
+            : "hidden "
+        }
+        `}
+      >
         <div>
           <HeadingWithEdit />
         </div>
@@ -27,7 +39,23 @@ export default function NextBar() {
         >
           <UpgradeBox />
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }
+const wrapperVariants = {
+  open: {
+    scaleY: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    },
+  },
+  closed: {
+    scaleY: 0,
+    transition: {
+      when: "afterChildren",
+      staggerChildren: 0.1,
+    },
+  },
+};
