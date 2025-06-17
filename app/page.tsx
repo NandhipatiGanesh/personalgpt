@@ -13,7 +13,7 @@ export default function Home() {
         </div>
 
         {/* Sticky Input Bar */}
-        <div className="z-10 sticky bottom-4 ">
+        <div className="z-10 sticky bottom-8 ">
           <InputMain />
         </div>
       </section>
